@@ -34,6 +34,10 @@ class Blixtljus_Widget extends WP_Widget {
         $email = get_field('email');
         $price = get_field('price');
         $images = get_field('gallery');
+
+        //$post = get_queried_object();
+        $post_Id= get_the_ID();
+        $utrustning_type= get_the_term_list($post_Id, 'utrustning_type', '', ',', '');
  
         echo $args['before_widget'];
  
@@ -44,6 +48,7 @@ class Blixtljus_Widget extends WP_Widget {
         echo '<div class="textwidget">';
 
         echo "<p>Address: {$location['address']}</p>";
+         echo "<p>utrustning_typ : {$utrustning_typ}</p>";
         echo "<p>Phone: {$phone}</p>";
         echo "<p>E-mail: {$email}</p>";
         echo "<p>Price: {$price} kr </p>";
