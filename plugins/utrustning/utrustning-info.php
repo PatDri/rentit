@@ -30,7 +30,7 @@ class Blixtljus_Widget extends WP_Widget {
         }
 
         $location = get_field('address');
-        $phonenumber = get_field('phone');
+        $phone = get_field('phone');
         $email = get_field('email');
         $price = get_field('price');
         $images = get_field('gallery');
@@ -44,6 +44,7 @@ class Blixtljus_Widget extends WP_Widget {
         echo '<div class="textwidget">';
 
         echo "<p>Address: {$location['address']}</p>";
+        echo "<p>Phone: {$phone}</p>";
         echo "<p>E-mail: {$email}</p>";
         echo "<p>Price: {$price} kr </p>";
 
