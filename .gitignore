@@ -1,0 +1,8 @@
+languages/
+plugins/advanced*
+plugins/akismet
+plugins/custom-post*
+plugins/hello.php
+themes/twenty*
+upgrade/
+uploads/
