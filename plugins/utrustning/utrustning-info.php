@@ -37,7 +37,7 @@ class Blixtljus_Widget extends WP_Widget {
 
         //$post = get_queried_object();
         $post_Id= get_the_ID();
-        $utrustning_type= get_the_term_list($post_Id, 'utrustning_type', '', ',', '');
+        $utrustning_type= get_the_term_list($post_Id, 'utrustning_typ', '', ',', '');
  
         echo $args['before_widget'];
  
@@ -48,16 +48,16 @@ class Blixtljus_Widget extends WP_Widget {
         echo '<div class="textwidget">';
 
         echo "<p>Address: {$location['address']}</p>";
-         echo "<p>utrustning_typ : {$utrustning_typ}</p>";
+        echo "<p>Utrustning typ: {$utrustning_typ}</p>";
         echo "<p>Phone: {$phone}</p>";
         echo "<p>E-mail: {$email}</p>";
         echo "<p>Price: {$price} kr </p>";
 
         if(!empty($images)){
             echo "<p><strong>Image Gallery</strong></p>";
-            echo "<ul class='wcmsh-image-gallery'>";
+            echo "<ul class='image-gallery'>";
             foreach ($images as $image) {
-                echo "<li><a href='{$image['url']}' data-lightbox='wcmsh-image-gallery'><img src='{$image['sizes']['thumbnail']}'/></a></li>";
+                echo "<li><a href='{$image['url']}' data-lightbox='image-gallery'><img src='{$image['sizes']['thumbnail']}'/></a></li>";
             }
             echo "</ul>";
         }
