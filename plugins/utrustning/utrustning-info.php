@@ -37,7 +37,7 @@ class Blixtljus_Widget extends WP_Widget {
 
         //$post = get_queried_object();
         $post_Id= get_the_ID();
-        $utrustning_type= get_the_term_list($post_Id, 'utrustning_typ', '', ',', '');
+        $utrustning_type= get_the_term_list($post_Id, 'utrustning_typ', '', ', ', '');
  
         echo $args['before_widget'];
  
