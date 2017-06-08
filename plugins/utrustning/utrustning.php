@@ -13,7 +13,7 @@ require "utrustning-info.php";
 //require "template-override.php";
 
 function utrustning_the_content_filter($content){
-	if(get_the_type()!=='Utrustning'){
+	if(get_post_type()!=='utrustning'){
 		return $content;
 	}
 	$images = get_field('gallery');
@@ -32,6 +32,7 @@ function utrustning_the_content_filter($content){
 	
 	return $html . $content;
 }
+add_filter('the_content', 'utrustning_the_content_filter');
 
 function utrustning_google_map_api($api){
     $api['key'] = 'AIzaSyAa38IcC1aetYkYfpdKdBWTU3qLtn_UqEE';
